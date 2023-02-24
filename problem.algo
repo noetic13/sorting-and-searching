@@ -1,0 +1,20 @@
+ALGORITHM Problem
+VAR
+    i,j,temp:INTEGER;
+    arr: ARRAY_OF INTEGER[6];
+BEGIN
+    Write("type an element to store in tab");
+    FOR j FROM 0 TO 5 STEP step  DO
+        Read(arr[j]);
+    END_FOR;
+
+    i:=length.(arr)-1;
+    WHILE (i>=1) DO
+        IF (arr[i]<arr[i-1]) THEN
+            temp:=arr[i-1];
+            arr[i-1]:=arr[i];
+            arr[i]:=temp;
+        END_IF;
+        i:=i-1;
+    END_WHILE;
+END
